@@ -11,6 +11,6 @@ The pages are generated from `UnifiedProductivity/Resources/PrivacyPolicy.md` an
 python3 scripts/export_privacy_site.py
 ```
 
-To publish, push the repository's `main` branch to GitHub, then open **Settings → Pages** and set the build and deployment source to **GitHub Actions**. The workflow deploys this folder. After the first successful run, GitHub shows the site's base URL under **Settings → Pages**. The policy is at that base URL; support is at `support.html` under it.
+To publish, push the repository's `main` branch to GitHub, then open **Settings → Pages** and set the build and deployment source to **GitHub Actions**. The workflow deploys this folder. After the first successful run, GitHub shows the site's base URL under **Settings → Pages**. The configured policy URL is `https://isaac-oj-abraham.github.io/actum-support/`; support is at `https://isaac-oj-abraham.github.io/actum-support/support.html`.
 
-Add those final HTTPS URLs to `UnifiedProductivity/Resources/PrivacyContact.json`, regenerate the pages, and run `python3 scripts/export_privacy_site.py --check-ready` before treating the links as release-ready. Re-run the generator after changing the policy or contact details.
+The HTTPS URLs are configured in `UnifiedProductivity/Resources/PrivacyContact.json`. Run `python3 scripts/export_privacy_site.py --check-ready` after policy or contact changes. The readiness check validates URL format, not whether the pages are publicly reachable; verify both links after deployment.
